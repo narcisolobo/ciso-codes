@@ -1,22 +1,25 @@
+---
+// Top-level imports like CSS go here
+import "./src/styles/global.css";
+import Header from "../components/Header.astro";
+---
+
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Ciso Codes</title>
+  </head>
+  <body
+    class="min-h-screen flex items-center justify-center bg-orange-50 text-gray-900 dark:text-orange-200 dark:bg-gray-900"
+  >
+    <script src="/scripts/toggle-dark-mode.js" is:inline></script>
+    <Header />
+    <div class="w-full">
+      <slot />
+    </div>
+  </body>
 </html>
-
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>
